@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Finance App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="app">
+  <header>
+    <h1> Finance</h1>
+    <button onclick="toggleDark()">🌙</button>
+  </header>
+
+  <div class="card saldo">
+    <p>Saldo</p>
+    <h2 id="saldo">R$ 0</h2>
+  </div>
+
+  <canvas id="grafico"></canvas>
+
+  <div class="input-area">
+    <input id="desc" placeholder="Descrição">
+    <input id="valor" type="number" placeholder="Valor (+ ou -)">
+    <select id="categoria">
+      <option>Alimentação</option>
+      <option>Transporte</option>
+      <option>Lazer</option>
+      <option>Outros</option>
+    </select>
+    <button onclick="add()">Adicionar</button>
+
+    <select id="filtroCategoria" onchange="render()">
+  <option value="todas">Todas</option>
+  <option>Alimentação</option>
+  <option>Transporte</option>
+  <option>Lazer</option>
+  <option>Outros</option>
+</select>
+
+  </div>
+
+  <ul id="lista"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

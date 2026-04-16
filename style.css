@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI";
+}
+
+body {
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.app {
+  width: 350px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  animation: fadeIn 0.5s ease;
+}
+
+canvas {
+  margin-bottom: 15px;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select, button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  background: #6a11cb;
+  color: white;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+li {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  animation: slide 0.3s ease;
+}
+
+.receita { border-left: 5px solid #00c853; }
+.despesa { border-left: 5px solid #d50000; }
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slide {
+  from {transform: translateX(-10px); opacity: 0;}
+  to {transform: translateX(0); opacity: 1;}
+}
+
+/* DARK MODE */
+.dark {
+  background: #121212;
+}
+
+.dark li {
+  background: #1e1e1e;
+  color: white;
+}
